@@ -18,7 +18,7 @@ function create_browser(data_file){
 	//var data_file = "files.json";
 	//var data_file = document.currentScript.getAttribute( "data-file" );
 	
-	$.get('/api/paths/'+data_file, function(data) {
+	$.get('api/paths/'+data_file, function(data) {
 
 		var response = [data],
 			currentPath = '',
