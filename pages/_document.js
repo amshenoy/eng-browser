@@ -6,8 +6,8 @@ export default function Document() {
       <Head>
 		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran|Didact+Gothic|Quattrocento+Sans|Work+Sans&display=swap" />
-		<script type="text/javascript" strategy="defer" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-		<script type="text/x-mathjax-config" strategy="defer" dangerouslySetInnerHTML={{
+		<script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<script type="text/x-mathjax-config" defer dangerouslySetInnerHTML={{
 			__html: `
 			  MathJax.Hub.Config({
 				//tex2jax: {
