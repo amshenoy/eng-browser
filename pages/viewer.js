@@ -121,12 +121,16 @@ function Page({ data }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps(context) {
+// export async function getServerSideProps(context) {
+// Page.getInitialProps = async ({ query, req, res }) => {
 // export const getServerSideProps = async () => {
-  const { url } = context.query
+export async function getServerSideProps({ query, req, res }) {
+  const url = query.url
+  
+  const baseUrl = "http://"+req.headers.host
   // Fetch data from external API
-  const res = await fetch(`http:localhost:3000/api/file?url=${url}`)
-  const data = await res.json()
+  const fetched = await fetch(`${baseUrl}/api/file?url=${url}`)
+  const data = await fetched.json()
 
   // Pass data to the page via props
   return { props: { data } }
